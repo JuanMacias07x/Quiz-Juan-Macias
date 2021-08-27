@@ -41,13 +41,14 @@ namespace Home
             this.rbP = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(3, 103);
+            this.lblName.Location = new System.Drawing.Point(12, 77);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(67, 20);
             this.lblName.TabIndex = 1;
@@ -56,7 +57,7 @@ namespace Home
             // 
             // txbNombre
             // 
-            this.txbNombre.Location = new System.Drawing.Point(66, 100);
+            this.txbNombre.Location = new System.Drawing.Point(73, 77);
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(287, 27);
             this.txbNombre.TabIndex = 2;
@@ -158,14 +159,25 @@ namespace Home
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(363, 97);
+            this.btnAdd.Location = new System.Drawing.Point(47, 114);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(81, 32);
+            this.btnAdd.Size = new System.Drawing.Size(118, 32);
             this.btnAdd.TabIndex = 14;
             this.btnAdd.Text = "agregar";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(173, 114);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(118, 32);
+            this.btnDelete.TabIndex = 15;
+            this.btnDelete.Text = "eliminar";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Home
             // 
@@ -173,6 +185,7 @@ namespace Home
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(134)))), ((int)(((byte)(219)))));
             this.ClientSize = new System.Drawing.Size(913, 547);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -205,6 +218,7 @@ namespace Home
         private System.Windows.Forms.RadioButton rbP;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
 

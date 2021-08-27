@@ -70,12 +70,23 @@ namespace Home
 
         private void LbListaCosas_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            if(LbListaCosas.SelectedIndex!=-1)
+                LbListaCosas.Text = (string)LbListaCosas.Items[LbListaCosas.SelectedIndex];
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             LbListaCosas.Items.Add(txbNombre.Text);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int indice = LbListaCosas.SelectedIndex;
+
+            if (indice != -1) ;
+            {
+                LbListaCosas.Items.RemoveAt(indice);
+            }
         }
     }
 }
