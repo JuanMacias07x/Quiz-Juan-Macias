@@ -1,7 +1,7 @@
 ﻿
 namespace Home
 {
-    partial class Form1
+    partial class Home
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,52 +29,43 @@ namespace Home
         /// </summary>
         private void InitializeComponent()
         {
-            this.ckbG = new System.Windows.Forms.CheckBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbNombre = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtxtResults = new System.Windows.Forms.RichTextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.ckbP = new System.Windows.Forms.CheckBox();
+            this.LbListaCosas = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.rbG = new System.Windows.Forms.RadioButton();
+            this.rbP = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ckbG
-            // 
-            this.ckbG.AutoSize = true;
-            this.ckbG.Location = new System.Drawing.Point(68, 372);
-            this.ckbG.Name = "ckbG";
-            this.ckbG.Size = new System.Drawing.Size(78, 24);
-            this.ckbG.TabIndex = 0;
-            this.ckbG.Text = "grande";
-            this.ckbG.UseVisualStyleBackColor = true;
-            this.ckbG.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(12, 96);
+            this.lblName.Location = new System.Drawing.Point(3, 146);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(67, 20);
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Nombre:";
             this.lblName.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // txbNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(85, 93);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(287, 27);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txbNombre.Location = new System.Drawing.Point(68, 143);
+            this.txbNombre.Name = "txbNombre";
+            this.txbNombre.Size = new System.Drawing.Size(287, 27);
+            this.txbNombre.TabIndex = 2;
+            this.txbNombre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(22, 135);
+            this.comboBox1.Location = new System.Drawing.Point(22, 101);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(333, 28);
             this.comboBox1.TabIndex = 3;
@@ -100,13 +91,13 @@ namespace Home
             this.btnReport.Text = "Reporte";
             this.btnReport.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // rtxtResults
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(565, 68);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(336, 328);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "";
+            this.rtxtResults.Location = new System.Drawing.Point(565, 68);
+            this.rtxtResults.Name = "rtxtResults";
+            this.rtxtResults.Size = new System.Drawing.Size(336, 328);
+            this.rtxtResults.TabIndex = 6;
+            this.rtxtResults.Text = "";
             // 
             // dateTimePicker1
             // 
@@ -115,24 +106,14 @@ namespace Home
             this.dateTimePicker1.Size = new System.Drawing.Size(277, 27);
             this.dateTimePicker1.TabIndex = 7;
             // 
-            // listBox1
+            // LbListaCosas
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(22, 182);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(333, 184);
-            this.listBox1.TabIndex = 8;
-            // 
-            // ckbP
-            // 
-            this.ckbP.AutoSize = true;
-            this.ckbP.Location = new System.Drawing.Point(209, 372);
-            this.ckbP.Name = "ckbP";
-            this.ckbP.Size = new System.Drawing.Size(90, 24);
-            this.ckbP.TabIndex = 9;
-            this.ckbP.Text = "pequeño";
-            this.ckbP.UseVisualStyleBackColor = true;
+            this.LbListaCosas.FormattingEnabled = true;
+            this.LbListaCosas.ItemHeight = 20;
+            this.LbListaCosas.Location = new System.Drawing.Point(22, 182);
+            this.LbListaCosas.Name = "LbListaCosas";
+            this.LbListaCosas.Size = new System.Drawing.Size(333, 184);
+            this.LbListaCosas.TabIndex = 8;
             // 
             // label1
             // 
@@ -145,43 +126,78 @@ namespace Home
             this.label1.Text = "Lista inventario";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // Form1
+            // rbG
+            // 
+            this.rbG.AutoSize = true;
+            this.rbG.Location = new System.Drawing.Point(36, 23);
+            this.rbG.Name = "rbG";
+            this.rbG.Size = new System.Drawing.Size(78, 24);
+            this.rbG.TabIndex = 11;
+            this.rbG.TabStop = true;
+            this.rbG.Text = "Grande";
+            this.rbG.UseVisualStyleBackColor = true;
+            // 
+            // rbP
+            // 
+            this.rbP.AutoSize = true;
+            this.rbP.Location = new System.Drawing.Point(144, 23);
+            this.rbP.Name = "rbP";
+            this.rbP.Size = new System.Drawing.Size(87, 24);
+            this.rbP.TabIndex = 12;
+            this.rbP.TabStop = true;
+            this.rbP.Text = "Pequeño";
+            this.rbP.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbP);
+            this.groupBox1.Controls.Add(this.rbG);
+            this.groupBox1.Location = new System.Drawing.Point(42, 372);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(275, 59);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tamaño producto";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(134)))), ((int)(((byte)(219)))));
             this.ClientSize = new System.Drawing.Size(913, 547);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.ckbP);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.LbListaCosas);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.rtxtResults);
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbNombre);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.ckbG);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Home";
+            this.Text = "Home";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckBox ckbG;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbNombre;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnReport;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtxtResults;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.CheckBox ckbP;
+        private System.Windows.Forms.ListBox LbListaCosas;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton rbG;
+        private System.Windows.Forms.RadioButton rbP;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

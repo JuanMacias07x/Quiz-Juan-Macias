@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace Home
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
-        public Form1()
+        public 
+            Home()
         {
             InitializeComponent();
         }
@@ -20,7 +21,6 @@ namespace Home
         private void button1_Click(object sender, EventArgs e)
         {
             
-            if (ckbG.Checked == true) ;
 
         }
 
@@ -40,6 +40,21 @@ namespace Home
         }
 
         private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblP1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
