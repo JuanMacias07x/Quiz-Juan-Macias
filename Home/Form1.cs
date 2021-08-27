@@ -20,7 +20,7 @@ namespace Home
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+           
 
         }
 
@@ -77,16 +77,44 @@ namespace Home
         private void btnAdd_Click(object sender, EventArgs e)
         {
             LbListaCosas.Items.Add(txbNombre.Text);
+            {
+                bool error = false;
+                    
+                foreach(char caracter in txbNombre.Text)
+                {
+                    if (char.IsDigit(caracter))
+                    {
+                        error = true;
+                        break;
+                    }
+                }
+
+                if (error)
+                {
+                    errorProvider1.SetError(txbNombre, "No se admiten números");
+                }
+                else
+                    errorProvider1.Clear();
+            }
+            
+            
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             int indice = LbListaCosas.SelectedIndex;
 
-            if (indice != -1) ;
+            if (indice != -1)
             {
                 LbListaCosas.Items.RemoveAt(indice);
             }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime fecha = dateTimePicker1.Value;
+
+            
         }
     }
 }
