@@ -40,6 +40,7 @@ namespace Home
             this.rbG = new System.Windows.Forms.RadioButton();
             this.rbP = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +56,7 @@ namespace Home
             // 
             // txbNombre
             // 
-            this.txbNombre.Location = new System.Drawing.Point(76, 100);
+            this.txbNombre.Location = new System.Drawing.Point(66, 100);
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(287, 27);
             this.txbNombre.TabIndex = 2;
@@ -64,7 +65,7 @@ namespace Home
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("MV Boli", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSave.Location = new System.Drawing.Point(64, 456);
+            this.btnSave.Location = new System.Drawing.Point(71, 434);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(94, 38);
             this.btnSave.TabIndex = 4;
@@ -75,7 +76,7 @@ namespace Home
             // btnReport
             // 
             this.btnReport.Font = new System.Drawing.Font("MV Boli", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnReport.Location = new System.Drawing.Point(208, 456);
+            this.btnReport.Location = new System.Drawing.Point(194, 434);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(95, 38);
             this.btnReport.TabIndex = 5;
@@ -85,8 +86,10 @@ namespace Home
             // 
             // rtxtResults
             // 
+            this.rtxtResults.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.rtxtResults.Location = new System.Drawing.Point(565, 72);
             this.rtxtResults.Name = "rtxtResults";
+            this.rtxtResults.ReadOnly = true;
             this.rtxtResults.Size = new System.Drawing.Size(336, 328);
             this.rtxtResults.TabIndex = 6;
             this.rtxtResults.Text = "";
@@ -104,8 +107,9 @@ namespace Home
             this.LbListaCosas.ItemHeight = 20;
             this.LbListaCosas.Location = new System.Drawing.Point(12, 153);
             this.LbListaCosas.Name = "LbListaCosas";
-            this.LbListaCosas.Size = new System.Drawing.Size(333, 184);
+            this.LbListaCosas.Size = new System.Drawing.Size(341, 184);
             this.LbListaCosas.TabIndex = 8;
+            this.LbListaCosas.SelectedIndexChanged += new System.EventHandler(this.LbListaCosas_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -144,7 +148,7 @@ namespace Home
             // 
             this.groupBox1.Controls.Add(this.rbP);
             this.groupBox1.Controls.Add(this.rbG);
-            this.groupBox1.Location = new System.Drawing.Point(28, 353);
+            this.groupBox1.Location = new System.Drawing.Point(51, 356);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(275, 59);
             this.groupBox1.TabIndex = 13;
@@ -152,12 +156,24 @@ namespace Home
             this.groupBox1.Text = "Tamaño producto";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(363, 97);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(81, 32);
+            this.btnAdd.TabIndex = 14;
+            this.btnAdd.Text = "agregar";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(134)))), ((int)(((byte)(219)))));
             this.ClientSize = new System.Drawing.Size(913, 547);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LbListaCosas);
@@ -188,6 +204,7 @@ namespace Home
         private System.Windows.Forms.RadioButton rbG;
         private System.Windows.Forms.RadioButton rbP;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnAdd;
     }
 }
 

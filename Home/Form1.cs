@@ -61,11 +61,21 @@ namespace Home
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            Report miforma= new Report(rtxtResults.Text);
+            Report reporte= new Report(rtxtResults.Text);
 
-            miforma.Show();
+            reporte.Show();
 
            
+        }
+
+        private void LbListaCosas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            LbListaCosas.Items.Add(txbNombre.Text);
         }
     }
 }

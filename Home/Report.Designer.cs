@@ -35,7 +35,7 @@ namespace Home
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(364, 368);
+            this.btnCerrar.Location = new System.Drawing.Point(347, 382);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(94, 29);
             this.btnCerrar.TabIndex = 0;
@@ -45,9 +45,9 @@ namespace Home
             // 
             // rtxtReporte
             // 
-            this.rtxtReporte.Location = new System.Drawing.Point(50, 32);
+            this.rtxtReporte.Location = new System.Drawing.Point(12, 35);
             this.rtxtReporte.Name = "rtxtReporte";
-            this.rtxtReporte.Size = new System.Drawing.Size(722, 299);
+            this.rtxtReporte.Size = new System.Drawing.Size(776, 316);
             this.rtxtReporte.TabIndex = 1;
             this.rtxtReporte.Text = "";
             // 
