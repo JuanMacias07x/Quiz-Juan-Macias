@@ -46,7 +46,7 @@ namespace Home
 
         private void lblP1_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void comboBox1_Click(object sender, EventArgs e)
@@ -57,6 +57,14 @@ namespace Home
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            Report miforma= new Report();
+
+
+            miforma.Show();
         }
     }
 }

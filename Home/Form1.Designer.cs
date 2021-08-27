@@ -31,7 +31,6 @@ namespace Home
         {
             this.lblName = new System.Windows.Forms.Label();
             this.txbNombre = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
             this.rtxtResults = new System.Windows.Forms.RichTextBox();
@@ -47,7 +46,7 @@ namespace Home
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(3, 146);
+            this.lblName.Location = new System.Drawing.Point(3, 103);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(67, 20);
             this.lblName.TabIndex = 1;
@@ -56,24 +55,16 @@ namespace Home
             // 
             // txbNombre
             // 
-            this.txbNombre.Location = new System.Drawing.Point(68, 143);
+            this.txbNombre.Location = new System.Drawing.Point(76, 100);
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(287, 27);
             this.txbNombre.TabIndex = 2;
             this.txbNombre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(22, 101);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(333, 28);
-            this.comboBox1.TabIndex = 3;
-            // 
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("MV Boli", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSave.Location = new System.Drawing.Point(306, 456);
+            this.btnSave.Location = new System.Drawing.Point(64, 456);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(94, 38);
             this.btnSave.TabIndex = 4;
@@ -84,16 +75,17 @@ namespace Home
             // btnReport
             // 
             this.btnReport.Font = new System.Drawing.Font("MV Boli", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnReport.Location = new System.Drawing.Point(508, 456);
+            this.btnReport.Location = new System.Drawing.Point(208, 456);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(95, 38);
             this.btnReport.TabIndex = 5;
             this.btnReport.Text = "Reporte";
             this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // rtxtResults
             // 
-            this.rtxtResults.Location = new System.Drawing.Point(565, 68);
+            this.rtxtResults.Location = new System.Drawing.Point(565, 72);
             this.rtxtResults.Name = "rtxtResults";
             this.rtxtResults.Size = new System.Drawing.Size(336, 328);
             this.rtxtResults.TabIndex = 6;
@@ -110,7 +102,7 @@ namespace Home
             // 
             this.LbListaCosas.FormattingEnabled = true;
             this.LbListaCosas.ItemHeight = 20;
-            this.LbListaCosas.Location = new System.Drawing.Point(22, 182);
+            this.LbListaCosas.Location = new System.Drawing.Point(12, 153);
             this.LbListaCosas.Name = "LbListaCosas";
             this.LbListaCosas.Size = new System.Drawing.Size(333, 184);
             this.LbListaCosas.TabIndex = 8;
@@ -152,7 +144,7 @@ namespace Home
             // 
             this.groupBox1.Controls.Add(this.rbP);
             this.groupBox1.Controls.Add(this.rbG);
-            this.groupBox1.Location = new System.Drawing.Point(42, 372);
+            this.groupBox1.Location = new System.Drawing.Point(28, 353);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(275, 59);
             this.groupBox1.TabIndex = 13;
@@ -173,7 +165,6 @@ namespace Home
             this.Controls.Add(this.rtxtResults);
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.txbNombre);
             this.Controls.Add(this.lblName);
             this.Name = "Home";
@@ -188,7 +179,6 @@ namespace Home
         #endregion
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txbNombre;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.RichTextBox rtxtResults;
