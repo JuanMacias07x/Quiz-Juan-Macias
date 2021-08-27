@@ -39,12 +39,13 @@ namespace Home
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.ckbP = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ckbG
             // 
             this.ckbG.AutoSize = true;
-            this.ckbG.Location = new System.Drawing.Point(32, 305);
+            this.ckbG.Location = new System.Drawing.Point(68, 372);
             this.ckbG.Name = "ckbG";
             this.ckbG.Size = new System.Drawing.Size(78, 24);
             this.ckbG.TabIndex = 0;
@@ -55,7 +56,7 @@ namespace Home
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(2, 86);
+            this.lblName.Location = new System.Drawing.Point(12, 96);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(67, 20);
             this.lblName.TabIndex = 1;
@@ -64,23 +65,24 @@ namespace Home
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(68, 83);
+            this.textBox1.Location = new System.Drawing.Point(85, 93);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
+            this.textBox1.Size = new System.Drawing.Size(287, 27);
             this.textBox1.TabIndex = 2;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(21, 139);
+            this.comboBox1.Location = new System.Drawing.Point(22, 135);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 28);
+            this.comboBox1.Size = new System.Drawing.Size(333, 28);
             this.comboBox1.TabIndex = 3;
             // 
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("MV Boli", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSave.Location = new System.Drawing.Point(294, 386);
+            this.btnSave.Location = new System.Drawing.Point(306, 456);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(94, 38);
             this.btnSave.TabIndex = 4;
@@ -91,7 +93,7 @@ namespace Home
             // btnReport
             // 
             this.btnReport.Font = new System.Drawing.Font("MV Boli", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnReport.Location = new System.Drawing.Point(419, 384);
+            this.btnReport.Location = new System.Drawing.Point(508, 456);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(95, 38);
             this.btnReport.TabIndex = 5;
@@ -100,9 +102,9 @@ namespace Home
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(540, 56);
+            this.richTextBox1.Location = new System.Drawing.Point(565, 68);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(248, 248);
+            this.richTextBox1.Size = new System.Drawing.Size(336, 328);
             this.richTextBox1.TabIndex = 6;
             this.richTextBox1.Text = "";
             // 
@@ -119,25 +121,37 @@ namespace Home
             this.listBox1.ItemHeight = 20;
             this.listBox1.Location = new System.Drawing.Point(22, 182);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(150, 104);
+            this.listBox1.Size = new System.Drawing.Size(333, 184);
             this.listBox1.TabIndex = 8;
             // 
             // ckbP
             // 
             this.ckbP.AutoSize = true;
-            this.ckbP.Location = new System.Drawing.Point(32, 335);
+            this.ckbP.Location = new System.Drawing.Point(209, 372);
             this.ckbP.Name = "ckbP";
             this.ckbP.Size = new System.Drawing.Size(90, 24);
             this.ckbP.TabIndex = 9;
             this.ckbP.Text = "pequeño";
             this.ckbP.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(565, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(180, 31);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Lista inventario";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(134)))), ((int)(((byte)(219)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(913, 547);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ckbP);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.dateTimePicker1);
@@ -167,6 +181,7 @@ namespace Home
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.CheckBox ckbP;
+        private System.Windows.Forms.Label label1;
     }
 }
 
