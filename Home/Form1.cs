@@ -61,10 +61,11 @@ namespace Home
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            Report miforma= new Report();
-
+            Report miforma= new Report(rtxtResults.Text);
 
             miforma.Show();
+
+           
         }
     }
 }

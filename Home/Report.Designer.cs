@@ -30,22 +30,33 @@ namespace Home
         private void InitializeComponent()
         {
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.rtxtReporte = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(513, 123);
+            this.btnCerrar.Location = new System.Drawing.Point(364, 368);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(94, 29);
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // rtxtReporte
+            // 
+            this.rtxtReporte.Location = new System.Drawing.Point(50, 32);
+            this.rtxtReporte.Name = "rtxtReporte";
+            this.rtxtReporte.Size = new System.Drawing.Size(722, 299);
+            this.rtxtReporte.TabIndex = 1;
+            this.rtxtReporte.Text = "";
             // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.rtxtReporte);
             this.Controls.Add(this.btnCerrar);
             this.Name = "Report";
             this.Text = "Report";
@@ -56,5 +67,6 @@ namespace Home
         #endregion
 
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.RichTextBox rtxtReporte;
     }
 }
