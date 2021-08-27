@@ -29,7 +29,7 @@ namespace Home
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.ckbG = new System.Windows.Forms.CheckBox();
             this.lblName = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -38,17 +38,19 @@ namespace Home
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.ckbP = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // checkBox1
+            // ckbG
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(55, 268);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(101, 24);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ckbG.AutoSize = true;
+            this.ckbG.Location = new System.Drawing.Point(32, 305);
+            this.ckbG.Name = "ckbG";
+            this.ckbG.Size = new System.Drawing.Size(78, 24);
+            this.ckbG.TabIndex = 0;
+            this.ckbG.Text = "grande";
+            this.ckbG.UseVisualStyleBackColor = true;
+            this.ckbG.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // lblName
             // 
@@ -70,7 +72,7 @@ namespace Home
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(36, 223);
+            this.comboBox1.Location = new System.Drawing.Point(21, 139);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(151, 28);
             this.comboBox1.TabIndex = 3;
@@ -115,10 +117,20 @@ namespace Home
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(223, 200);
+            this.listBox1.Location = new System.Drawing.Point(22, 182);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(150, 104);
             this.listBox1.TabIndex = 8;
+            // 
+            // ckbP
+            // 
+            this.ckbP.AutoSize = true;
+            this.ckbP.Location = new System.Drawing.Point(32, 335);
+            this.ckbP.Name = "ckbP";
+            this.ckbP.Size = new System.Drawing.Size(90, 24);
+            this.ckbP.TabIndex = 9;
+            this.ckbP.Text = "pequeño";
+            this.ckbP.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -126,6 +138,7 @@ namespace Home
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(134)))), ((int)(((byte)(219)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ckbP);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.richTextBox1);
@@ -134,7 +147,7 @@ namespace Home
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.ckbG);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -144,7 +157,7 @@ namespace Home
 
         #endregion
 
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox ckbG;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -153,6 +166,7 @@ namespace Home
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.CheckBox ckbP;
     }
 }
 
