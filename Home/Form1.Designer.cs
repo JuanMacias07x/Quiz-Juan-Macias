@@ -94,9 +94,10 @@ namespace Home
             this.rtxtResults.Location = new System.Drawing.Point(565, 72);
             this.rtxtResults.Name = "rtxtResults";
             this.rtxtResults.ReadOnly = true;
-            this.rtxtResults.Size = new System.Drawing.Size(336, 328);
+            this.rtxtResults.Size = new System.Drawing.Size(336, 343);
             this.rtxtResults.TabIndex = 6;
             this.rtxtResults.Text = "";
+            this.rtxtResults.TextChanged += new System.EventHandler(this.rtxtResults_TextChanged);
             // 
             // dateTimePicker1
             // 
@@ -113,7 +114,7 @@ namespace Home
             // 
             this.LbListaCosas.FormattingEnabled = true;
             this.LbListaCosas.ItemHeight = 20;
-            this.LbListaCosas.Location = new System.Drawing.Point(12, 153);
+            this.LbListaCosas.Location = new System.Drawing.Point(22, 231);
             this.LbListaCosas.Name = "LbListaCosas";
             this.LbListaCosas.Size = new System.Drawing.Size(341, 184);
             this.LbListaCosas.TabIndex = 8;
@@ -125,9 +126,9 @@ namespace Home
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(565, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 31);
+            this.label1.Size = new System.Drawing.Size(162, 31);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Lista inventario";
+            this.label1.Text = "Lista mercado";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // rbG
@@ -140,6 +141,7 @@ namespace Home
             this.rbG.TabStop = true;
             this.rbG.Text = "Grande";
             this.rbG.UseVisualStyleBackColor = true;
+            this.rbG.CheckedChanged += new System.EventHandler(this.rbG_CheckedChanged);
             // 
             // rbP
             // 
@@ -156,7 +158,7 @@ namespace Home
             // 
             this.groupBox1.Controls.Add(this.rbP);
             this.groupBox1.Controls.Add(this.rbG);
-            this.groupBox1.Location = new System.Drawing.Point(51, 356);
+            this.groupBox1.Location = new System.Drawing.Point(76, 126);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(275, 59);
             this.groupBox1.TabIndex = 13;
@@ -166,7 +168,7 @@ namespace Home
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(47, 114);
+            this.btnAdd.Location = new System.Drawing.Point(71, 192);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(118, 32);
@@ -177,7 +179,7 @@ namespace Home
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(173, 114);
+            this.btnDelete.Location = new System.Drawing.Point(194, 192);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(118, 32);
@@ -194,7 +196,7 @@ namespace Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(134)))), ((int)(((byte)(219)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(134)))), ((int)(((byte)(19)))));
             this.ClientSize = new System.Drawing.Size(913, 547);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);

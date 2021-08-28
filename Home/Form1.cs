@@ -20,7 +20,7 @@ namespace Home
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            rtxtResults.Text = LbListaCosas.Text + "\r\n";  
 
         }
 
@@ -36,7 +36,25 @@ namespace Home
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            {
+                bool error = false;
 
+                foreach (char caracter in txbNombre.Text)
+                {
+                    if (char.IsDigit(caracter))
+                    {
+                        error = true;
+                        break;
+                    }
+                }
+
+                if (error)
+                {
+                    errorProvider1.SetError(txbNombre, "No se admiten números");
+                }
+                else
+                    errorProvider1.Clear();
+            }
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -96,6 +114,20 @@ namespace Home
                 else
                     errorProvider1.Clear();
             }
+            {
+
+                if (rbG.Checked)
+                {
+                    this.LbListaCosas.Text = txbNombre.Text + "grande";
+                }
+                {
+                    if (rbP.Checked)
+                    {
+                        this.LbListaCosas.Text = txbNombre.Text + "pequeño";
+                    }
+                }
+                
+            }
             
             
         }
@@ -115,6 +147,13 @@ namespace Home
             DateTime fecha = dateTimePicker1.Value;
 
             
+        }
+
+        private void rtxtResults_TextChanged(object sender, EventArgs e) => rtxtResults.Text = LbListaCosas.Text;
+
+        private void rbG_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
