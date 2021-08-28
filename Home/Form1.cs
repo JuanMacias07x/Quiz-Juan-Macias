@@ -83,7 +83,7 @@ namespace Home
 
             reporte.Show();
 
-           
+
         }
 
         private void LbListaCosas_SelectedIndexChanged(object sender, EventArgs e)
@@ -116,14 +116,15 @@ namespace Home
             }
             {
 
+               
                 if (rbG.Checked)
                 {
-                    this.LbListaCosas.Text = txbNombre.Text + "grande";
+                    
                 }
                 {
                     if (rbP.Checked)
                     {
-                        this.LbListaCosas.Text = txbNombre.Text + "pequeño";
+                        
                     }
                 }
                 
@@ -153,7 +154,6 @@ namespace Home
 
         private void rbG_CheckedChanged(object sender, EventArgs e)
         {
-
         }
     }
 }
